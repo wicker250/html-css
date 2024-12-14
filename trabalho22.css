@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+}
+
+    
+body{
+    position: relative;
+    padding: 0%;
+    margin: 0%;
+    margin-top: 0;
+}
+.fundo{
+    
+    background-image: url('body2.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+   
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.3;
+        z-index: -1; 
+    
+
+}
+
+p{
+    padding: 1%;
+    
+}
+
+h1{
+    padding: 0.5%;
+    margin-top: 0;
+    text-align:center;
+    text-decoration: underline;
+    color: rgb(0, 90, 37);
+    font-size: 2em;
+}
+
+h2{
+    padding: 0%;
+    margin-top: 0;
+    text-align:center;
+    text-decoration: underline;
+    color: rgb(87, 0, 104);
+    font-size: 1em;
+    text-shadow: 2px 2px 5px;
+}
+.flex-pai{
+    background-color: blue;
+  
+   width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    position: sticky;
+    top: 0%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+
+
+}
+
+.flex-pai div{
+
+    background-color: aliceblue;
+    border-radius: 1px;
+    border-color: black;
+    border-style: dashed;
+    padding: 10px;
+    margin: 10px; 
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: blueviolet;
+    position: sticky;
+    align-items: center;
+    width: 10%;
+
+    
+}
+.image-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align:center;
+    padding: 10px 20px;
+    background-image: url('img-art_resized3.jpg'); 
+    background-size:cover;
+    background-position: center;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(15, 15, 15, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 10%;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.image-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    .flex-pai{
+        background-color: red;
+        flex-direction: row;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: left;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        
+
+    }
+}
+
+@media screen and (max-width:600px) {
+    .flex-pai div{
+    flex-wrap: wrap;
+    position: relative;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .image-button {
+        
+        padding: 10px;
+        display: inline-block;
+        position: relative;
+        text-decoration: Bold;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 10px;
+        background-image: url('arte-ia3.jpg'); 
+        background-size:cover;
+        background-position: center;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 20%;
+        height: auto;
+         flex-wrap: wrap;
+        align-items: left;
+       
+        
+    }
+
+
+}
+
+
+@media screen and (max-width:600px) {
+    h2{ visibility: hidden;}
+
+}

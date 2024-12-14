@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    margin-top: 0;
+}
+
+p{
+    padding: 1%;
+    
+}
+
+h1{
+    padding: 0.5%;
+    margin-top: 0;
+    text-align:center;
+    text-decoration: underline;
+    color: rgb(0, 90, 37);
+    font-size: 2em;
+}
+
+h2{
+    padding: 0%;
+    margin-top: 0;
+    text-align:center;
+    text-decoration: underline;
+    color: rgb(87, 0, 104);
+    font-size: 1em;
+    text-shadow: 2px 2px 5px;
+}
+
+.nav{
+    background-color: #30336b;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    position: sticky;
+    top: 0%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+
+.nav-button {
+
+    height: 12vh;
+    width: auto;
+
+    color: #dff9fb;
+    font-size: 16px;
+    font-weight: bold;
+    text-align:center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    
+}
+
+.button-icon {
+    background-color: #eb4d4b;
+    
+    width: 1em;
+    height: 1em;
+    
+    border-radius: 50%;
+
+    box-shadow: 2px 2px 5px #130f40;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.selected {
+    background-color: #badc58;
+}
+
+.button-label {
+    font-size: 1em;
+}
+
+.nav-button:hover {
+
+    .button-icon {
+        transform: scale(1.2);
+        border-radius: 8px;
+        box-shadow: 0.5px 0.5px 5px #dff9fb;
+    }
+
+    .button-label {
+        color: #4834d4;
+    }
+
+}
+
+.nav-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+@media screen and (max-width:600px) {
+    .flex-pai{
+        background-color: red;
+        flex-direction: row;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: left;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        
+
+    }
+}
+
+@media screen and (max-width:600px) {
+    .flex-pai div{
+    flex-wrap: wrap;
+    position: relative;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .image-button {
+        
+        padding: 10px;
+        display: inline-block;
+        position: relative;
+        text-decoration: Bold;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 10px;
+        background-image: url('arte-ia3.jpg'); 
+        background-size:cover;
+        background-position: center;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        width: 20%;
+        height: auto;
+         flex-wrap: wrap;
+        align-items: left;
+       
+        
+    }
+
+
+}
+
+
+@media screen and (max-width:600px) {
+    h2{ visibility: hidden;}
+
+} 

@@ -1,7 +1,6 @@
 @import url('vars.css');
 
 body {
-    font-family: Arial, sans-serif;
     background-color: var(--white-color);
     color: var(--primary-color);
 }
@@ -56,6 +55,10 @@ strong {
 .title-section {
     grid-column-start: 1;
     grid-column-end: 4;
+}
+
+.generative-models-container {
+    font-size: var(--font-size-small)
 }
 
 .imagem-article,

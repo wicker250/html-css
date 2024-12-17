@@ -1,9 +1,9 @@
+@import url('vars.css');
 
 body {
     font-family: Arial, sans-serif;
-    /* line-height: 1.6; */
-    background-color: #fbf7ff;
-    color: #41364b;
+    background-color: var(--white-color);
+    color: var(--primary-color);
 }
 
 h1 {
@@ -41,14 +41,13 @@ strong {
     font-weight: bold;
 }
 
-
-
 /* Grid para o layout da main */
 #introducao {
     margin-bottom: 40px;
 }
 
-#ferramentas, #projetos {
+#ferramentas,
+#projetos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -59,12 +58,17 @@ strong {
     grid-column-end: 4;
 }
 
-.imagem-article, .video-article {
+.imagem-article,
+.video-article {
+    width: 100%;
+    height: auto;
+
     max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-figcaption, p.caption {
+figcaption,
+p.caption {
     font-style: italic;
     color: #555;
     font-size: 0.9rem;
@@ -72,6 +76,7 @@ figcaption, p.caption {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
 }
 
 .poema {
@@ -81,66 +86,73 @@ figcaption, p.caption {
     color: #41364b;
 }
 
-/* Estilos para o footer */ 
+/* Estilos para o footer */
 .nome-equipe {
     text-align: center;
     font-size: 1.3em;
     text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.5);
 }
 
-@media screen and (max-width:600px) {
-    .flex-pai {
-        background-color: red;
-        flex-direction: row;
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: left;
-        justify-content: center;
+@media (max-width: 900px) {
+
+    #ferramentas,
+    #projetos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .imagem-article,
+    .video-article {
         width: 100%;
         height: auto;
+    }
 
-
+    .title-section {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
 
-@media screen and (max-width:600px) {
-    .flex-pai div {
-        flex-wrap: wrap;
-        position: relative;
+@media (max-width: 600px) {
+
+    #ferramentas,
+    #projetos {
+        grid-template-columns: 1fr;
     }
-}
 
-
-@media screen and (max-width:600px) {
-    .image-button {
-
-        padding: 10px;
-        display: inline-block;
-        position: relative;
-        text-decoration: Bold;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        text-align: center;
-        padding: 5px 10px;
-        background-image: url('arte-ia3.jpg');
-        background-size: cover;
-        background-position: center;
-        border: none;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s, box-shadow 0.2s;
-        width: 20%;
-        height: auto;
-        flex-wrap: wrap;
-        align-items: left;
+    h1 {
+        font-size: 1.8em;
     }
-}
 
-
-@media screen and (max-width:600px) {
     h2 {
-        visibility: hidden;
+        font-size: 1.5em;
+    }
+
+    .imagem-article,
+    .video-article {
+        width: 100%;
+        height: auto;
+    }
+
+    .title-section {
+        grid-column-start: 1;
+        grid-column-end: 1;
+    }
+
+    figcaption,
+    p.caption {
+        font-size: 0.8rem;
+    }
+
+    .nome-equipe {
+        font-size: 1.1em;
+        text-shadow: none;
     }
 }

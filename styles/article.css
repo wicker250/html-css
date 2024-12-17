@@ -128,9 +128,10 @@
 @media screen and (min-width: 600px) {
   .artefact:nth-child(even) {
     flex-direction: row-reverse;
-
-    .artefact-buttons {
-      justify-content: flex-start;
-    }
   }
+
+  .artefact:nth-child(even) .artefact-buttons {
+    justify-content: flex-start;
+  }
+  
 }

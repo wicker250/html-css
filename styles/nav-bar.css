@@ -60,23 +60,6 @@
   cursor: pointer;
 }
 
-.nav-button:hover {
-  .button-icon {
-    transform: scale(1.2);
-    border-radius: 8px;
-    box-shadow: 0.5px 0.5px 5px #dff9fb;
-  }
-
-  .button-label {
-    color: #d1fcff;
-  }
-}
-
-.nav-button:active {
-  transform: scale(0.98);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
-}
-
 @media screen and (max-width: 1200px) {
   .nav .logo {
     width: 25rem;

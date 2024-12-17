@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos Generativos - Explicações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+    <img src="./imagens/logo.svg" class="logo" alt="Logo da página" width="100px" height="100px">
+    <div class="buttons">
+        <a href="https://www.pag2.com" class="button">
+            <button class="button-label">Início</button>
+        </a>
+        <a href="https://www.pag2.com" class="button">
+            <button class="button-label">Introdução</button>
+        </a>
+        <a href="./arte-vs-ia.html" class="button">
+            <button class="button-label">Artefatos</button>
+        </a>
+        <a href="./modelos-generativos-na-arte.html" class="button selected">
+            <button class="button-label"><b>Algoritmo</b></button>
+        </a>
+        <a href="./tipos-de-algoritmos-modelos-generativos/tipos-de-algoritmos-modelos-generativos.html" class="button selected">
+            <button class="button-label"><b>Tipos de Algoritmos</b></button>
+        </a>
+    </div>
+    <h1>Introdução aos Modelos Generativos</h1>
+    <p>Entenda um pouco sobre os diferentes tipos de modelos generativos, como GANs, Transformadores, Difusão e VAE.</p>
+</header>
+
+
+<main>
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header" style="background-image: url('frente.webp');"></div>
+                    <div class="card-body">
+                        <h2>Difusão</h2>
+                        <p>
+                            Modelos de difusão geram dados, como imagens, gradualmente, 
+                            adicionando ruído e depois revertendo esse processo. O processo é semelhante a um desfoque reverso.
+                            <br><b>Usos:</b> Os modelos de difusão são mais comumente associados à geração de imagens e outras tarefas de processamento de imagens, 
+                            como preenchimento (inpainting) e super-resolução, mas suas aplicações se estendem a outros domínios, incluindo geração de áudio, 
+                            design de medicamentos e geração de moléculas.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-header" style="background-image: url('tras.webp');"></div>
+                    <div class="card-body">
+                        <p>
+                            Este tipo de modelo é baseado em duas etapas: 
+                            uma etapa de difusão direta e uma etapa de difusão reversa. 
+                            Na etapa de difusão direta, os dados de entrada são gradualmente perturbados ao longo de várias etapas, adicionando ruído gaussiano. 
+                            Na etapa reversa, ele tem a tarefa de recuperar os dados de entrada originais, aprendendo a reverter gradualmente o processo de difusão.
+                            Os modelos de difusão são conhecidos pela qualidade e diversidade das amostras geradas, apesar dos custos computacionais, como 
+                            baixas velocidades devido ao grande número de etapas envolvidas durante a amostragem.
+                        </p>
+                        <div class="tooltip">
+                            <span class="tooltip-text">
+                                <ul>
+                                    <li><a href="https://www.ibm.com/think/topics/diffusion-models" target="_blank">IBM - Diffusion Models</a></li>
+                                    <li><a href="https://ieeexplore.ieee.org/abstract/document/10081412" target="_blank">Diffusion Models in Vision: A Survey</a></li>
+                                </ul>
+                            </span>
+                            <a href="#">Referências</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header" style="background-image: url('frenteGAN.jpg');"></div>
+                    <div class="card-body">
+                        <h2>GAN</h2>
+                        <p>As redes generativas adversariais (GANs) oferecem uma maneira de aprender representações profundas sem a necessidade de dados de treinamento amplamente anotados.
+                            Elas alcançam isso derivando sinais de retropropagação por meio de um processo competitivo envolvendo um par de redes. 
+                            <br><b>Usos:</b>As representações que podem ser aprendidas pelas GANs podem ser usadas em uma variedade de aplicações, 
+                            incluindo síntese de imagens, edição semântica de imagens, transferência de estilo, super-resolução de imagens e classificação.</p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-header" style="background-image: url('frenteGAN.jpg');"></div>
+                    <div class="card-body">
+                        <p> 
+                            GAN treina duas redes neurais para competirem entre si
+                            a partir de um determinado conjunto de dados de treinamento. 
+                            Pode-se gerar novas imagens de um banco de dados de imagens existente ou músicas originais de um banco de dados de músicas. 
+                            Uma rede gera novos dados pegando uma amostra de dados de entrada e modificando-a.
+                            A outra rede tenta prever se a saída de dados gerada pertence ao conjunto de dados original, por isso são adversárias. 
+                            A rede de previsão determina se os dados gerados são falsos ou reais.
+                            Um loop de versões melhores é gerada até que a rede de previsão não consiga mais distinguir o falso do original.</p>
+                        <div class="tooltip">
+                            <span class="tooltip-text">
+                                <ul>
+                                    <li><a href="https://ieeexplore.ieee.org/abstract/document/8253599" target="_blank">Generative Adversarial Networks: An Overview</a></li>
+                                    <li><a href="https://aws.amazon.com/what-is/gan/#:~:text=A%20GAN%20is%20called%20adversarial,belongs%20in%20the%20original%20dataset." target="_blank">AWS - O que é uma GAN</a></li>
+                                </ul>
+                            </span>
+                            <a href="#">Referências</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header" style="background-image: url('gptFrente.jpg');"></div>
+                    <div class="card-body">
+                        <h2>Transformadores</h2>
+                        <p>
+                            Transformam ou alteram uma sequência de entrada em uma sequência de saída. 
+                            Considere esta sequência de entrada: "Qual é a cor do céu?" O modelo do transformador usa uma representação matemática interna
+                            que identifica a relevância e a relação entre as palavras cor, céu e azul. Ele usa esse conhecimento para gerar a saída: "O céu é azul". 
+                            <br><b>Usos:</b> organizações usam modelos de transformadores para todos os tipos de conversões de sequência, 
+                            desde reconhecimento de fala até tradução automática e análise de sequências de proteínas.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-header" style="background-image: url('gptFrente.jpg');"></div>
+                    <div class="card-body">
+                        <p> 
+                            Modelos iniciais de aprendizado profundo se concentravam em tarefas de processamento de linguagem natural (PLN)
+                            com o objetivo de fazer com que os computadores entendessem e respondessem.
+                            Os primeiros modelos analisavam a frequência das relações entre várias combinações de palavras ou grupos de 
+                            palavras em seu conjunto de dados de treinamento e previam qual seria a palavra posterior. 
+                            No entanto, a tecnologia inicial não conseguia reter o contexto quando o tamanho da entrada ultrapassava um certo ponto.
+                            Foi então que os modelos de transformadores tomaram forma.
+                        </p>
+                        <div class="tooltip">
+                            <span class="tooltip-text">
+                                <ul>
+                                    <li><a href="https://aws.amazon.com/pt/what-is/transformers-in-artificial-intelligence/" target="_blank">AWS - Transformadores em IA</a></li>
+                                </ul>
+                            </span>
+                            <a href="#">Referências</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header" style="background-image: url('frenteVAE.png');"></div>
+                    <div class="card-body">
+                        <h2>VAE</h2>
+                        <p> 
+                            Um autoencoder variacional (VAE) é um algoritmo de IA generativa que utiliza aprendizado profundo para gerar novos conteúdos, 
+                            detectar anomalias e remover ruídos.
+                            Apareceram pela primeira vez em 2013,
+                            são adequados para gerar dados sintéticos de séries temporais que treinam outros algoritmos de IA. 
+                            <br><b>Usos:</b>VAEs são uma das principais escolhas para realizar análise de sinais para interpretar feeds de dados de IoT, 
+                            sinais biológicos como eletroencefalografia ou feeds de dados financeiros.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-header" style="background-image: url('frenteVAE.png');"></div>
+                    <div class="card-body">
+                        <p>
+                            Autoencoders são um tipo de rede neural projetada para aprender representações eficientes de dados.
+                            Os autoencoders consistem em duas partes principais:
+                            O codificador: Compacta os dados de entrada em um espaço latente de dimensão reduzida.
+                            O decodificador: Reconstrói os dados originais a partir dessa representação comprimida.
+                            O objetivo principal dos autoencoders é minimizar a diferença entre a entrada e a saída reconstruída, aprendendo assim uma representação compacta dos dados.
+                            A principal inovação dos VAEs reside na sua capacidade de gerar novos dados de alta qualidade.
+                        </p>
+                        <div class="tooltip">
+                            <span class="tooltip-text">
+                                <ul>
+                                    <li><a href="https://www.techtarget.com/searchenterpriseai/definition/variational-autoencoder-VAE" target="_blank">VAE</a></li>
+                                    <li><a href="https://www.datacamp.com/tutorial/variational-autoencoders" target="_blank">Variational Autoencoders</a></li>
+                                </ul>
+                            </span>
+                            <a href="#">Referências</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

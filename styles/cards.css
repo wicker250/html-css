@@ -1,50 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('vars.css');
+
+.title, .description {
+    padding: 10px;
+    height: 5rem;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #34343f;
-    color: #ffffff;
-    padding: 0.5em;
-    margin: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.title {
+    font-size:  3rem;
 }
 
-header {
-    text-align: center;
-    margin: 1em;
-    padding: 1em;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin: 0.5em;
-    padding: 0.5em;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #bdbdbd;
+.description {
+    font-size: var(--font-size-medium);
 }
 
 .cards-container {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-top: 0.5em;
+    margin-top: 1.5em;
     perspective: 70em; 
 }
 
 .card {
-    width: 28em;
-    height: 38em;
+    width: 35rem;
+    height: 50rem;
     position: relative;
     transform-style: preserve-3d; 
     transition: transform 1s; 
@@ -86,7 +65,7 @@ header p {
 .card-body {
     width: 100%;
     height: 65%;
-    background-color: #fbf7ff;
+    background-color: var(--white-color);
     border-radius: 0 0 10px 10px;
     display: flex;
     flex-direction: column;
@@ -95,35 +74,31 @@ header p {
 }
 
 .card-front {
-    background-color: #463b4f;
+    background-color: var(--primary-color);
     position: absolute;
 }
 
 .card-back {
-    background-color: #463b4f;
+    background-color: var(--primary-color);
     transform: rotateY(180deg); 
     position: absolute;
 }
 
 .card-body h2, .card-body p {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
     margin: 0.5em;
     text-align: center;
 }
 
 .card h2 {
     font-size: 1.5rem;
-    color: #41364b;
     font-weight: bold;
     margin-bottom: 0.5em;
 }
 
 .card-body p {
-    font-size: clamp(0.8rem, 0.9em, 1.5rem); 
-    color: #555;
+    font-size: 1.2rem; 
     text-align: center;
     line-height: 1.5;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .card:hover .card-inner {
@@ -138,8 +113,8 @@ header p {
 
 .tooltip .tooltip-text {
     visibility: hidden;
-    background-color: #555;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     text-align: left;
     border-radius: 5px;
     padding: 8px;
@@ -169,30 +144,32 @@ header p {
 }
 
 .tooltip .tooltip-text ul li a {
-    color: #fff;
+    color: var(--white-color);
     text-decoration: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--white-color);
 }
 
 .tooltip .tooltip-text ul li a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 1400px) {
-    .card h2 {
-        font-size: 1.2em; 
-    }
+.artefact-button {
+    display: flex;
+    border: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
+    background-color: rgba(251, 197, 49, 0.6);
+    padding: 1rem 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
-    .card p {
-        font-size: 0.7rem;
+@media (max-width: 900px) {
+    .cards-container {
+     flex-wrap: wrap;
     }
-}
-
-@media (max-width: 1000px) {  
-    .card h2 {
-        font-size: 0.8em; 
-    }
-    .card p {
-        font-size: 0.5rem; 
-    }
-}
+  }

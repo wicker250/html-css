@@ -6,20 +6,20 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3rem;
     text-align: center;
     padding: 20px;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2rem;
     text-align: center;
     padding: 20px;
 }
 
 p {
     margin-bottom: 15px;
-    font-size: 1em;
+  font-size: var(--font-size-medium);
 }
 
 section {
@@ -41,12 +41,12 @@ strong {
 }
 
 /* Grid para o layout da main */
-#introducao {
+#intro {
     margin-bottom: 40px;
 }
 
-#ferramentas,
-#projetos {
+#tools,
+#projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -82,24 +82,17 @@ p.caption {
     margin-bottom: 10px;
 }
 
-.poema {
+.poem {
     font-style: italic;
     margin-top: 20px;
     line-height: 1.8;
     color: #41364b;
 }
 
-/* Estilos para o footer */
-.nome-equipe {
-    text-align: center;
-    font-size: 1.3em;
-    text-shadow: 3px 3px 5px rgba(255, 0, 0, 0.5);
-}
-
 @media (max-width: 900px) {
 
-    #ferramentas,
-    #projetos {
+    #tools,
+    #projects {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -125,8 +118,8 @@ p.caption {
 
 @media (max-width: 600px) {
 
-    #ferramentas,
-    #projetos {
+    #tools,
+    #projects {
         grid-template-columns: 1fr;
     }
 
@@ -154,8 +147,4 @@ p.caption {
         font-size: 0.8rem;
     }
 
-    .nome-equipe {
-        font-size: 1.1em;
-        text-shadow: none;
-    }
 }
